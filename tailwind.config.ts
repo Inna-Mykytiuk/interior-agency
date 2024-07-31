@@ -5,6 +5,7 @@ const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -35,7 +36,8 @@ const config: Config = {
         backdrop: `linear-gradient(rgba(41, 41, 41, 0.40),rgba(41, 41, 41, 0.40))`,
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        palms: `url(/pictures/palm.png)`,
+        sample: `url(/images/sample.jpg)`,
+        sample1: `url(/images/sample1.jpg)`,
         hero1: `url(/images/hero2.webp)`,
         hero2: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(/images/hero2.jpg)`,
       },
