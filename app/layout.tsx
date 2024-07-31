@@ -3,6 +3,7 @@ import { Oswald } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const oswald = Oswald({
   weight: ["400", "500", "600", "700"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
