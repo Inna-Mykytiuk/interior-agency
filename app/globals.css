@@ -10,3 +10,7 @@
     text-wrap: balance;
   }
 }
+
+.hover-text-shadow:hover {
+  text-shadow: 4px 4px 30px rgba(207, 188, 185, 0.9);
+}

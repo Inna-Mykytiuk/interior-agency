@@ -24,8 +24,13 @@ const Header = () => {
             className={`flex flex-col transition-all duration-300 ease-in-out sm:flex-row absolute right-0 bg-black w-screen h-screen sm:h-fit sm:w-fit sm:top-0 sm:relative sm:bg-transparent gap-6 justify-center items-center ${showMenu ? "top-0" : "-top-[100vh]"}`}
           >
             {headerData.header.map((item) => (
-              <li key={item.href} className="text-base uppercase text-white">
-                <Link href={item.href}>{item.label}</Link>
+              <li key={item.href} className="text-base uppercase text-white  ">
+                <Link
+                  href={item.href}
+                  className="hover-text-shadow transition-all duration-300 ease-in-out"
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>

@@ -36,6 +36,8 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         palms: `url(/pictures/palm.png)`,
+        hero1: `url(/images/hero2.webp)`,
+        hero2: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(/images/hero2.jpg)`,
       },
       content: {
         line: `url(/images/elements/roundedLine.png)`,
