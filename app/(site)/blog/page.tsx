@@ -15,8 +15,8 @@ const BlogPage: React.FC = async () => {
       className="py-24 sm:py-24  w-full justify-center flex items-center bg-black"
     >
       <div className="container" id="container">
-        <div className="">
-          <div className="text-white text-6xl font-bebas">
+        <div>
+          <div className="text-white text-6xl font-oswald">
             <h1>Our Blogs</h1>
           </div>
           <div className="grid justify-between w-full gap-6 grid-cols-1 md:grid-cols-3">
