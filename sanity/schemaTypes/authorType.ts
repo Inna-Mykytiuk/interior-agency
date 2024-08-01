@@ -1,43 +1,48 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from "sanity";
 
 export const authorType = defineType({
-  name: 'author',
-  title: 'Author',
-  type: 'document',
+  name: "author",
+  title: "Author",
+  type: "document",
   fields: [
     defineField({
-      name: 'name',
-      type: 'string',
+      name: "name",
+      title: "Name",
+      type: "string",
     }),
     defineField({
-      name: 'slug',
-      type: 'slug',
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'name',
+        source: "name",
         maxLength: 96,
       },
     }),
     defineField({
-      name: 'image',
-      type: 'image',
+      name: "image",
+      title: "Image",
+      type: "image",
       options: {
         hotspot: true,
       },
       fields: [
         {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text',
-        }
-      ]
+          name: "alt",
+          type: "string",
+          title: "Alternative Text",
+        },
+      ],
     }),
     defineField({
-      name: 'bio',
-      type: 'array',
+      name: "bio",
+      title: "Bio",
+      type: "array",
       of: [
         {
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
+          title: "Block",
+          type: "block",
+          styles: [{ title: "Normal", value: "normal" }],
           lists: [],
         },
       ],
@@ -45,8 +50,8 @@ export const authorType = defineType({
   ],
   preview: {
     select: {
-      title: 'name',
-      media: 'image',
+      title: "name",
+      media: "image",
     },
   },
-})
+});
