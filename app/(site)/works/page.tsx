@@ -7,14 +7,22 @@ import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
-const WorksPage = () => {
+const WorksPage = async () => {
+  const data = await getWorksPage();
+
+  const { Content, Hero, CallToAction } = data;
+
   return (
-    <section
-      id="section"
-      className="py-24  relative w-full justify-center flex items-center bg-black"
-    >
-      <div className="container"></div>
-    </section>
+    <>
+      <section
+        id="section"
+        className="py-24 overflow-hidden sm:py-24 sm:h-screen sm:max-h-screen relative w-full justify-center flex items-center bg-black"
+      >
+        <div className="container">
+          <h1 className="text-white text-6xl font-oswald">{Hero.heading}</h1>
+        </div>
+      </section>
+    </>
   );
 };
 
