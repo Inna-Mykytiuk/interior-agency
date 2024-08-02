@@ -93,11 +93,13 @@ export async function getServicesPage(slug: string) {
       title,
       link
     }
-        },
+  },
+
     'Video':pageBuilder[][_type == "video"][0]{
     videoLabel,
     url
     },
+
       'FormContact':pageBuilder[][_type == "form"][0]{
     label,
     heading,
@@ -113,9 +115,9 @@ export async function getServicesPage(slug: string) {
 export async function getWorksPage() {
   const getPageQuery = groq`*[_type == "page"][slug == 'works'][0]{
     'Heading':title,
-    slug,
+      slug,
     'Hero':pageBuilder[][_type == "hero"][0]{
-      'heroImage':image.asset->url,
+    'heroImage':image.asset->url,
       heading,
       tagline
     },
@@ -128,12 +130,11 @@ export async function getWorksPage() {
       location,
       url,
       'imageUrls':images[].asset->{
-        'url':url
+      'url':url
       }
     },
-    
 
-          'CallToAction':pageBuilder[][_type == "callToAction"][0]{
+    'CallToAction':pageBuilder[][_type == "callToAction"][0]{
       _type == "callToAction" => @-> {
       _type,
       title,
@@ -160,10 +161,6 @@ export async function getGalleryPage() {
         'url':url
       }
     },
-    
-
-  
-  
 }`;
 
   return await client.fetch(getPageQuery, {
