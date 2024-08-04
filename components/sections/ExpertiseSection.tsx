@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import room3 from "../../../public/images/room33.jpg";
-import room4 from "../../../public/images/room4.jpg";
+import room3 from "../../public/images/room33.jpg";
+import room4 from "../../public/images/room4.jpg";
 
 const ExpertiseSection = () => {
   return (
