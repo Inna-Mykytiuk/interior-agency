@@ -70,7 +70,7 @@ export async function getHomepage() {
 }
 
 export async function getServicesPage(slug: string) {
-  const getPageQuery = groq`*[_type == "page" && slug.current == ${slug}][0]{
+  const getPageQuery = groq`*[_type == "page" && slug.current == ${slug}][1]{
     
     'Heading':title,
     'Content':pageBuilder[][_type == "textWithIllustration"]{
@@ -105,9 +105,7 @@ export async function getServicesPage(slug: string) {
     },
 }`;
 
-  return await client.fetch(getPageQuery, {
-    revalidate: new Date().getSeconds(),
-  });
+  return await client.fetch(getPageQuery, { slug });
 }
 
 export async function getWorksPage() {

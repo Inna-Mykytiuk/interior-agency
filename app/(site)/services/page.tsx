@@ -13,9 +13,8 @@ const ServicesPage = async () => {
   return (
     <section
       id="section"
-      className="py-24  relative w-full justify-center flex items-center bg-black"
+      className="py-24 overflow-hidden sm:py-30 w-full justify-center flex items-center bg-black"
     >
-      {" "}
       <div id="container" className="container">
         <div className="text-white text-6xl font-bebas">
           <h1>{Heading}</h1>
@@ -36,7 +35,7 @@ const ServicesPage = async () => {
                 <Link
                   href={CallToAction.link}
                   target="_blank"
-                  className="text-white border-2 border-white py-3 font-bebas  text-xl text-x text-center hover:bg-white hover:text-black duration-300"
+                  className="text-white border-2 border-white py-3 font-bebas text-xl text-center hover:bg-white hover:text-black duration-300"
                 >
                   {CallToAction.title}
                 </Link>
@@ -44,23 +43,25 @@ const ServicesPage = async () => {
             );
           })}
 
-          <div className="col-span-1 md:col-span-3">
-            <Marquee className="h-full w-full" loop={50}>
-              {Gallery.imageUrls?.map((image: ImageType, index: number) => {
-                return (
-                  <div className="h-[450px] aspect-auto w-full" key={index}>
-                    <Image
-                      src={image.url}
-                      alt="Images"
-                      width={450}
-                      height={300}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                );
-              })}
-            </Marquee>
-          </div>
+          {Gallery && (
+            <div className="col-span-1 md:col-span-3">
+              <Marquee className="h-full w-full" loop={50}>
+                {Gallery.imageUrls?.map((image: ImageType, index: number) => {
+                  return (
+                    <div className="h-[450px] aspect-auto w-full" key={index}>
+                      <Image
+                        src={image.url}
+                        alt="Images"
+                        width={450}
+                        height={300}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  );
+                })}
+              </Marquee>
+            </div>
+          )}
         </div>
       </div>
     </section>
