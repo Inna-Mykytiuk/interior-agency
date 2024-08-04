@@ -1,27 +1,29 @@
-import React from "react";
+import Image from "next/image";
+import { Hero } from "@/types/pageTypes";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  hero: Hero;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ hero }) => {
   return (
-    <section
-      id="section"
-      className="h-screen py-6 sm:py-24 max-h-[1120px] sm:max-h-screen w-full flex bg-hero2 bg-cover bg-center bg-no-repeat"
-    >
-      <div className="container" id="container">
-        <div className="flex flex-col-reverse sm:flex-row items-start sm:items-end gap-3 xl:gap-0 sm:justify-between w-full h-full">
-          <button
-            type="button"
-            className="border-2 font-oswald text-white hover:bg-white hover:text-black hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out text-lg rounded-full px-9 py-1 pb-2"
-          >
+    <section className="py-6 sm:py-24 max-h-[1120px] h-screen sm:max-h-screen relative w-full justify-center flex items-center">
+      <div className="px-6 sm:px-24 w-full h-full">
+        <Image
+          src={hero.heroImage}
+          alt="Hero Background cover"
+          fill
+          className="w-full h-full object-cover absolute"
+        />
+        <div className="flex sm:flex-row flex-col-reverse items-start sm:items-end gap-3 xl:gap-0 sm:justify-between w-full relative bottom-0 h-full">
+          <button className="border-2 font-bebas pt-1 text-white hover:bg-white hover:text-black text-lg duration-300 border-white rounded-full px-9 py-1">
             Explore
           </button>
           <div className="flex flex-col">
-            <h1 className="font-bold text-4xl leading-none text-white font-oswald">
-              Furniture For Your Home
-            </h1>
-            <p className="text-white text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
-              autem!
-            </p>
+            <h2 className="font-bold text-4xl leading-none font-bebas text-white">
+              {hero.heading}
+            </h2>
+            <p className="text-white text-lg">{hero.tagline} </p>
           </div>
         </div>
       </div>

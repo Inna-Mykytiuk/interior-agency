@@ -69,8 +69,8 @@ export async function getHomepage() {
   });
 }
 
-export async function getServicesPage(slug: string) {
-  const getPageQuery = groq`*[_type == "page" && slug.current == ${slug}][2]{
+export async function getServicesPage() {
+  const getPageQuery = groq`*[_type == "page"][slug == 'services'][0]{
     
     'Heading':title,
     'Content':pageBuilder[][_type == "textWithIllustration"]{
@@ -105,7 +105,9 @@ export async function getServicesPage(slug: string) {
     },
 }`;
 
-  return await client.fetch(getPageQuery, { slug });
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
 }
 
 export async function getWorksPage() {
