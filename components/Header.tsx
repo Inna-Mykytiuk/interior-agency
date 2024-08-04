@@ -8,7 +8,7 @@ import headerData from "@/data/header.json";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => {
-    console.log("click");
+    // console.log("click");
     setShowMenu(!showMenu);
   };
 

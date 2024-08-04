@@ -7,7 +7,7 @@ import { getPosts, Post } from "@/sanity/queries/post";
 
 const BlogPage: React.FC = async () => {
   const postData: Post[] = await getPosts();
-  console.log(postData);
+  // console.log(postData);
 
   return (
     <section

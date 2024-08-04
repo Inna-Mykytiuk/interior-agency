@@ -48,8 +48,8 @@ const WorksPage = async () => {
             <div
               key={index}
               className={clsx(
-                "sticky text-white overflow-hidden top-0 sm:h-[75vh] pb-24 shrink-0 w-full",
-                index % 2 == 0 ? "bg-white text-black" : "bg-black"
+                "sticky  overflow-hidden top-0 sm:h-[75vh] shrink-0 w-full",
+                index % 2 == 0 ? "bg-white text-black" : "bg-black text-white"
               )}
             >
               <div id="container" className="container">
@@ -116,12 +116,10 @@ const WorksPage = async () => {
             </div>
           );
         })}
-
-        <div className="sticky text-black top-82 bg-slate-600 opacity-0 h-[600px] shrink-0 w-full"></div>
       </section>
       <section
         id="section"
-        className="py-24 sm:py-24  w-full justify-center flex flex-col items-center bg-black"
+        className=" w-full justify-center flex flex-col items-center bg-black"
       >
         <div id="container" className="container">
           <div className="grid grid-cols-1 md:grid-cols-2">

@@ -10,7 +10,7 @@ const Footer = () => {
             Let's talk{" "}
           </p>
           <ul className="flex justify-center sm:flex-row items-center sm:gap-6">
-            <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-black transition-all duration-300 ease-in-out mx-3 rounded-full px-3 py-1">
+            <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-black transition-all duration-300 ease-in-out mx-3 rounded-full px-3 py-1 hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] ">
               <Link
                 href="https://www.linkedin.com/in/inna-mykytiuk/"
                 target="_blank"
@@ -18,12 +18,12 @@ const Footer = () => {
                 Linkedin
               </Link>
             </li>
-            <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-black transition-all duration-300 ease-in-out mx-3 rounded-full px-3 py-1">
+            <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-black transition-all duration-300 ease-in-out mx-3 rounded-full px-3 py-1 hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] ">
               <Link href="https://github.com/Inna-Mykytiuk" target="_blank">
                 Github
               </Link>
             </li>
-            <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-black transition-all duration-300 ease-in-out mx-3 rounded-full px-3 py-1">
+            <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-black transition-all duration-300 ease-in-out mx-3 rounded-full px-3 py-1 hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] ">
               <Link href="https://t.me/Bilskirnirr" target="_blank">
                 Telegram
               </Link>
