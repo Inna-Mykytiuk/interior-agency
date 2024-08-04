@@ -13,7 +13,7 @@ const ServicesPage = async () => {
   return (
     <section
       id="section"
-      className="py-24 overflow-hidden sm:py-24 sm:h-screen  w-full justify-center flex items-center bg-black"
+      className="py-24 relative w-full justify-center flex items-center bg-black"
     >
       <div id="container" className="container">
         <div className="text-white text-6xl font-bebas">
