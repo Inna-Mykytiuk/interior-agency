@@ -2,9 +2,9 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
-import armchair1 from "../../public/images/armchair1.webp";
-import armchair2 from "../../public/images/armchair2.webp";
-import armchair3 from "../../public/images/armchair5.webp";
+import armchair1 from "../../../public/images/armchair1.webp";
+import armchair2 from "../../../public/images/armchair2.webp";
+import armchair3 from "../../../public/images/armchair5.webp";
 
 const ComfortSection = () => {
   return (

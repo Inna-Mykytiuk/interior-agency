@@ -1,7 +1,7 @@
-import HeroSection from "../../components/sections/HeroSection";
-import AboutSection from "../../components/sections/AboutSection";
-import ComfortSection from "../../components/sections/ComfortSection";
-import ExpertiseSection from "../../components/sections/ExpertiseSection";
+import HeroSection from "./sections/HeroSection";
+import AboutSection from "./sections/AboutSection";
+import ComfortSection from "./sections/ComfortSection";
+import ExpertiseSection from "./sections/ExpertiseSection";
 
 export default function Home() {
   return (
