@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import React from "react";
 import { SERVICES } from "@/sanity/constants/services";
 import { ContentType, getServicesPage, ImageType } from "@/sanity/queries/page";
