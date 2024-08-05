@@ -32,12 +32,12 @@ const componentsTest: PortableTextComponents = {
   },
   types: {
     image: ({ value }) => (
-      <div className="sm:h-[45vh] aspect-auto w-full h-[33vh] mb-6">
+      <div className="sm:h-[800px] aspect-auto w-full h-[33vh] mb-6">
         <Image
           src={urlFor(value).url()}
           alt={value.alt || " "}
-          width={320}
-          height={450}
+          width={1440}
+          height={1000}
           className="w-full h-full object-cover"
           loading="lazy"
         />
@@ -88,7 +88,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
       id="section"
       className="py-24 sm:py-24 relative w-full justify-center flex items-center bg-white"
     >
-      <div id="container" className="container">
+      <div id="container" className="container flex flex-col items-center">
         <div className="flex flex-col w-full">
           <div className="flex sm:flex-row text-black border-b-black border-b-2 pb-5 justify-between items-start sm:items-center">
             <div>
@@ -121,7 +121,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             />
           </div>
         </div>
-        <div className="text-black w-full flex justify-center items-start flex-col">
+        <div className="text-black w-full sm:w-[70vw] flex justify-center items-start flex-col">
           <PortableText value={data?.body} components={componentsTest} />
         </div>
       </div>

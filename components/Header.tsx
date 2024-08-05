@@ -37,12 +37,12 @@ const Header = () => {
             <div className="text-white sm:hidden z-20 relative">
               <Hamburger hideOutline={false} onToggle={() => toggleMenu()} />
             </div>
-            <button
-              type="button"
+            <Link
+              href="https://t.me/Bilskirnirr"
               className="sm:block font-oswald hidden border-2 border-white rounded-full px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-black hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
             >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -128,7 +128,7 @@ const WorksPage = async () => {
                 {CallToAction.title}
               </h2>
               <Link
-                href="/"
+                href="https://t.me/Bilskirnirr"
                 className="px-6 font-oswald py-3 w-fit border-2 border-white  cursor-pointer text-white hover:bg-white  hover:text-black hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out text-xl"
               >
                 {CallToAction.label}
