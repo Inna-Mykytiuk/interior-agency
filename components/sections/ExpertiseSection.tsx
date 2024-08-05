@@ -27,7 +27,7 @@ const ExpertiseSection: React.FC<ExpertisesSectionProps> = ({ expertises }) => {
               href="/works"
               className="w-full sm:w-1/2 flex justify-center items-center h-[330px] sm:h-[600px] bg-black group transition-all duration-500 ease-in-out hover:border-black hover:rounded-xl cursor-pointer relative"
             >
-              <span className="text-white text-2xl relative z-10 font-oswald group-hover:opacity-20 opacity-100 transition-all duration-500 ease-in-out">
+              <span className="text-white text-2xl relative z-10 font-oswald group-hover:opacity-0 opacity-100 transition-all duration-500 ease-in-out">
                 {expertise.heading}
               </span>
               <Image
