@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ImageOverlay } from "@/types/pageTypes";
 
 interface ImageOverlaySectionProps {

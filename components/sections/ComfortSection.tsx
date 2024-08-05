@@ -2,12 +2,17 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import Link from "next/link";
+import { Gallery, ImageType } from "@/types/pageTypes";
 
 import armchair1 from "../../public/images/armchair1.webp";
 import armchair2 from "../../public/images/armchair2.webp";
 import armchair3 from "../../public/images/armchair5.webp";
 
-const ComfortSection = () => {
+interface GallerySectionProps {
+  gallery: Gallery;
+}
+
+const ComfortSection: React.FC<GallerySectionProps> = ({ gallery }) => {
   return (
     <section
       id="section"
@@ -27,24 +32,35 @@ const ComfortSection = () => {
             <Image
               src={armchair1}
               alt="armchair"
-              width={320}
-              height={450}
+              width={420}
+              height={420}
               className="h-[450px] sm:h-2/4 w-full sm:w-1/4 sm:right-[33%] top-0 sm:absolute object-cover"
             />
             <Image
               src={armchair2}
               alt="armchair"
-              width={320}
-              height={320}
+              width={420}
+              height={420}
               className="h-3/4 w-full sm:w-1/3 sm:left-0 bottom-0 sm:absolute object-cover"
             />
             <Image
               src={armchair3}
               alt="armchair"
-              width={320}
-              height={450}
+              width={420}
+              height={420}
               className="h-[450px] sm:h-2/4 w-full sm:w-1/4 sm:right-0 bottom-0 sm:absolute object-cover"
             />
+            {/* {gallery.imageUrls.map((image: ImageType, index: number) => (
+              <div key={index} className="sm:w-[33vw] h-full">
+                <Image
+                  src={image.url}
+                  alt=""
+                  width={420}
+                  height={420}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ))} */}
           </Marquee>
         </div>
       </div>
