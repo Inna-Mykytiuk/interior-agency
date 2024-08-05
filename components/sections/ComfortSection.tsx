@@ -4,9 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Gallery, ImageType } from "@/types/pageTypes";
 
-import armchair1 from "../../public/images/armchair1.webp";
-import armchair2 from "../../public/images/armchair2.webp";
-import armchair3 from "../../public/images/armchair5.webp";
+import room1 from "../../public/images/room1.jpg";
+import room2 from "../../public/images/room2.jpg";
+import room3 from "../../public/images/room5.jpg";
+import room4 from "../../public/images/room4.jpg";
 
 interface GallerySectionProps {
   gallery: Gallery;
@@ -30,25 +31,25 @@ const ComfortSection: React.FC<GallerySectionProps> = ({ gallery }) => {
         <div className="w-full h-full flex items-center justify-center ">
           <Marquee className="w-full h-full gap-8">
             <Image
-              src={armchair1}
+              src={room1}
               alt="armchair"
               width={420}
               height={420}
               className="h-[450px] sm:h-2/4 w-full sm:w-1/4 sm:right-[33%] top-0 sm:absolute object-cover"
             />
             <Image
-              src={armchair2}
-              alt="armchair"
-              width={420}
-              height={420}
-              className="h-3/4 w-full sm:w-1/3 sm:left-0 bottom-0 sm:absolute object-cover"
-            />
-            <Image
-              src={armchair3}
+              src={room3}
               alt="armchair"
               width={420}
               height={420}
               className="h-[450px] sm:h-2/4 w-full sm:w-1/4 sm:right-0 bottom-0 sm:absolute object-cover"
+            />
+            <Image
+              src={room4}
+              alt="armchair"
+              width={420}
+              height={420}
+              className="h-3/4 w-full sm:w-1/3 sm:left-0 bottom-0 sm:absolute object-cover"
             />
             {/* {gallery.imageUrls.map((image: ImageType, index: number) => (
               <div key={index} className="sm:w-[33vw] h-full">
