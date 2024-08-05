@@ -8,14 +8,13 @@ import headerData from "@/data/header.json";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => {
-    // console.log("click");
     setShowMenu(!showMenu);
   };
 
   return (
-    <header className="w-full flex justify-between items-center absolute z-10">
+    <header className="w-full flex justify-between items-center absolute z-10 bg-black">
       <div className="container">
-        <div className="flex justify-between items-center w-full py-3 border-b-2 border-white">
+        <div className="flex justify-between items-center w-full py-3 ">
           <Link href="/" className="text-white font-oswald text-xl">
             Interior
           </Link>

@@ -23,8 +23,8 @@ const GalleryPage = async () => {
       id="section"
       className="py-24 overflow-hidden sm:py-24 relative w-full justify-center flex items-center bg-black"
     >
-      <div id="container" className=" px-6 sm:px-24 w-full h-full">
-        <h1 className="text-white text-6xl font-bebas">Gallery</h1>
+      <div id="container" className="container">
+        <h1 className="text-white text-6xl font-oswald">Gallery</h1>
         <span className="text-white text-base font-bold italic">
           Our Entire works are showcased here.
         </span>

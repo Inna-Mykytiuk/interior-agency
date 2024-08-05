@@ -1,7 +1,132 @@
-import React from "react";
+export const revalidate = 0;
 
-const BlogDetailPag = () => {
-  return <div></div>;
+import { PortableText } from "@portabletext/react";
+import { client } from "@/sanity/lib/client";
+import { getDetailPost } from "@/sanity/queries/post";
+import { PortableTextComponents } from "@portabletext/react";
+import { default as imageUrlBuilder } from "@sanity/image-url";
+
+import Image from "next/image";
+import Link from "next/link";
+
+const builder = imageUrlBuilder(client);
+
+function urlFor(source: any) {
+  return builder.image(source);
+}
+
+const componentsTest: PortableTextComponents = {
+  block: {
+    h1: ({ children }) => <h1 className="text-5xl mb-6">{children}</h1>,
+    h2: ({ children }) => (
+      <h2 className="text-3xl mb-6 leading-none">{children}</h2>
+    ),
+    h3: ({ children }) => <h3 className="text-3xl mb-6">{children}</h3>,
+    h4: ({ children }) => <h4 className="text-2xl mb-6">{children}</h4>,
+    normal: ({ children }) => <p className="!mb-6">{children}</p>,
+    blockquote: ({ children }) => (
+      <blockquote className="border-l-white mb-6 border-l-4 border-opacity-60 bg-white/10 p-6 w-full">
+        {children}
+      </blockquote>
+    ),
+  },
+  types: {
+    image: ({ value }) => (
+      <div className="sm:h-[45vh] aspect-auto w-full h-[33vh] mb-6">
+        <Image
+          src={urlFor(value).url()}
+          alt={value.alt || " "}
+          width={320}
+          height={450}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    ),
+  },
+  marks: {
+    em: ({ children }) => (
+      <em className="text-gray-400 font-semibold">{children}</em>
+    ),
+    link: ({ value, children }) => {
+      const target = (value?.href || "").startsWith("http")
+        ? "_blank"
+        : undefined;
+      return (
+        <Link
+          href={value?.href}
+          target={target}
+          className="font-bold underline text-yellow-300"
+        >
+          {children}
+        </Link>
+      );
+    },
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="mt-xl list-disc px-6">{children}</ul>
+    ),
+    number: ({ children }) => <ol className="mt-lg">{children}</ol>,
+    checkmarks: ({ children }) => (
+      <ol className="m-auto text-lg">{children}</ol>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => <li>{children}</li>,
+    checkmarks: ({ children }) => <li>✅ {children}</li>,
+  },
 };
 
-export default BlogDetailPag;
+const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = params;
+
+  const data = await getDetailPost(slug);
+
+  return (
+    <section
+      id="section"
+      className="py-24 sm:py-24 relative w-full justify-center flex items-center bg-white"
+    >
+      <div id="container" className="container">
+        <div className="flex flex-col w-full">
+          <div className="flex sm:flex-row text-black border-b-black border-b-2 pb-5 justify-between items-start sm:items-center">
+            <div>
+              <p>{data?.author}</p>
+              <p>{data?.publishedAt}</p>
+            </div>
+            <div className="flex flex-wrap">
+              {data?.categories?.map((category: string, index: number) => (
+                <p
+                  className="border-2 border-black rounded-full px-6 py-2"
+                  key={index}
+                >
+                  {category}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div className="py-6">
+            <h1 className="text-6xl text-black font-bebas leading-none">
+              {data?.title}
+            </h1>
+          </div>
+          <div className="aspect-auto h-full sm:h-[800px] w-full">
+            <Image
+              src={data?.imageUrl}
+              alt={data?.slug.current || ""}
+              width={1200}
+              height={800}
+              className="w-full h-full sm:h-[800px] object-cover"
+            />
+          </div>
+        </div>
+        <div className="text-black w-full flex justify-center items-start flex-col">
+          <PortableText value={data?.body} components={componentsTest} />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BlogDetailPage;
