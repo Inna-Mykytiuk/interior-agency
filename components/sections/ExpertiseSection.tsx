@@ -3,9 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Expertise } from "@/types/pageTypes";
 
-// import room3 from "../../public/images/room33.jpg";
-// import room4 from "../../public/images/room4.jpg";
-
 interface ExpertisesSectionProps {
   expertises: Expertise[];
 }
@@ -14,7 +11,7 @@ const ExpertiseSection: React.FC<ExpertisesSectionProps> = ({ expertises }) => {
   return (
     <section
       id="section"
-      className="py-6 xl:py-40 mt-0 sm:mt-16 xl:mb-16 h-fit sm:h-screen flex items-center justify-center w-full"
+      className="py-6 xl:py-20 mt-0 sm:mt-12 xl:mb-12 h-fit flex items-center justify-center w-full"
     >
       <div className="container" id="container">
         <div className="flex flex-col items-center justify-center">

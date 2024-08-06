@@ -56,7 +56,7 @@ const componentsTest: PortableTextComponents = {
         <Link
           href={value?.href}
           target={target}
-          className="font-bold underline text-yellow-300"
+          className="font-bold underline text-brown-300"
         >
           {children}
         </Link>
@@ -121,7 +121,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             />
           </div>
         </div>
-        <div className="text-black w-full sm:w-[70vw] flex justify-center items-start flex-col">
+        <div className="text-black w-full  flex justify-center items-start flex-col">
           <PortableText value={data?.body} components={componentsTest} />
         </div>
       </div>

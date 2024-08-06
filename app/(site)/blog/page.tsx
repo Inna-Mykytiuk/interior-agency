@@ -12,7 +12,7 @@ const BlogPage: React.FC = async () => {
   return (
     <section
       id="section"
-      className="py-24 sm:py-24  w-full justify-center flex items-center bg-black"
+      className="py-24 sm:py-24  w-full justify-center flex items-center bg-black grow"
     >
       <div className="container" id="container">
         <div>

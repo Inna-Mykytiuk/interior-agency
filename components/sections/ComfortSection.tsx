@@ -20,10 +20,10 @@ const ComfortSection: React.FC<GallerySectionProps> = ({ gallery }) => {
       className="py-6 xl:py-24 h-fit w-full sm:h-screen flex items-center justify-center relative"
     >
       <div className="container w-full h-full" id="container">
-        <div className="relative w-full mb-6 sm:mb-0">
+        <div className="w-full mb-6 sm:mb-12">
           <Link
             href="/works"
-            className=" font-semibold border-2 hover:bg-black hover:text-white font-oswald pt-1 border-black rounded-full px-3 py-1 transition-all duration-300 ease-in-out hover:shadow-md sm:mb-6"
+            className=" font-semibold border-2 hover:bg-black hover:text-white font-oswald pt-1 border-black rounded-full px-3 py-1 transition-all duration-300 ease-in-out hover:shadow-md"
           >
             See Our Works
           </Link>
