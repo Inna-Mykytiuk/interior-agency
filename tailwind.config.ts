@@ -38,8 +38,10 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         sample: `url(/images/sample.jpg)`,
         sample1: `url(/images/sample1.jpg)`,
-        hero1: `url(/images/hero2.webp)`,
-        hero2: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(/images/hero2.jpg)`,
+        // hero1: `url(/images/hero2.webp)`,
+        hero: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(/images/hero/hero2.png)`,
+        hero2: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(/images/hero/hero2.png)`,
+        overlay: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))`,
       },
       content: {
         line: `url(/images/elements/roundedLine.png)`,
