@@ -2,10 +2,9 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import Link from "next/link";
-import { Gallery, ImageType } from "@/types/pageTypes";
+import { Gallery } from "@/types/pageTypes";
 
 import room1 from "../../public/images/room1.jpg";
-import room2 from "../../public/images/room2.jpg";
 import room3 from "../../public/images/room5.jpg";
 import room4 from "../../public/images/room4.jpg";
 
@@ -15,15 +14,12 @@ interface GallerySectionProps {
 
 const ComfortSection: React.FC<GallerySectionProps> = ({ gallery }) => {
   return (
-    <section
-      id="section"
-      className="py-6 xl:py-24 h-fit w-full sm:h-screen flex items-center justify-center relative"
-    >
-      <div className="container w-full h-full" id="container">
+    <section className="py-6 xl:py-24 h-fit w-full sm:h-screen flex items-center justify-center relative">
+      <div className="container w-full h-full">
         <div className="w-full mb-6 sm:mb-12">
           <Link
             href="/works"
-            className=" font-semibold border-2 hover:bg-black hover:text-white font-oswald pt-1 border-black rounded-full px-3 py-1 transition-all duration-300 ease-in-out hover:shadow-md"
+            className=" font-semibold border-2 hover:bg-mainBcg hover:text-white font-oswald pt-1 border-black rounded-full px-3 py-1 transition-all duration-300 ease-in-out hover:shadow-md"
           >
             See Our Works
           </Link>

@@ -9,7 +9,7 @@ import ExpertiseSection from "../../components/sections/ExpertiseSection";
 
 export default async function Home() {
   const data = await getHomepage();
-  // console.log(data);
+
   const { Hero, Content, Expertises, Gallery, SectionImageOverlay } = data;
 
   return (

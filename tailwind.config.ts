@@ -39,7 +39,7 @@ const config: Config = {
         sample: `url(/images/sample.jpg)`,
         sample1: `url(/images/sample1.jpg)`,
         // hero1: `url(/images/hero2.webp)`,
-        hero: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(/images/hero/hero2.png)`,
+        hero: `url(/images/hero/hero2.png)`,
         hero2: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(/images/hero/hero2.png)`,
         overlay: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))`,
       },
@@ -70,7 +70,7 @@ const config: Config = {
         "6xl": "clamp(4.77rem, 7.48vw + 2.9rem, 8.88rem)",
       },
       colors: {
-        mainBcg: '#001E23',
+        mainBcg: '#242629',
         lightBlue: '#4A8087',
         mainBlue: '#1879EA',
         btnBorder: '#00A189',

@@ -9,11 +9,8 @@ interface ExpertisesSectionProps {
 
 const ExpertiseSection: React.FC<ExpertisesSectionProps> = ({ expertises }) => {
   return (
-    <section
-      id="section"
-      className="py-6 xl:py-20 mt-0 sm:mt-12 xl:mb-12 h-fit flex items-center justify-center w-full"
-    >
-      <div className="container" id="container">
+    <section className="py-6 xl:py-20 mt-0 sm:mt-12 xl:mb-12 h-fit flex items-center justify-center w-full">
+      <div className="container">
         <div className="flex flex-col items-center justify-center">
           <h3 className="text-5xl font-oswald mb-8">Our Expertise</h3>
         </div>
@@ -22,7 +19,7 @@ const ExpertiseSection: React.FC<ExpertisesSectionProps> = ({ expertises }) => {
             <Link
               key={index}
               href="/works"
-              className="w-full sm:w-1/2 flex justify-center items-center h-[330px] sm:h-[600px] bg-black group transition-all duration-500 ease-in-out hover:border-black hover:rounded-xl cursor-pointer relative"
+              className="w-full sm:w-1/2 flex justify-center items-center h-[330px] sm:h-[600px] bg-mainBcg group transition-all duration-500 ease-in-out hover:border-mainBcg hover:rounded-xl cursor-pointer relative"
             >
               <span className="text-white text-2xl relative z-10 font-oswald group-hover:opacity-0 opacity-100 transition-all duration-500 ease-in-out">
                 {expertise.heading}
