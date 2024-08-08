@@ -40,7 +40,11 @@ const Header = () => {
           </ul>
           <div>
             <div className="text-white sm:hidden z-20 relative">
-              <Hamburger hideOutline={false} onToggle={() => toggleMenu()} />
+              <Hamburger
+                hideOutline={false}
+                toggled={showMenu}
+                toggle={toggleMenu}
+              />
             </div>
             <Link
               href="https://t.me/Bilskirnirr"
