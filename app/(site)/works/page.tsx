@@ -111,7 +111,7 @@ const WorksPage = async () => {
           );
         })}
       </section>
-      <section className=" w-full justify-center flex flex-col items-center bg-black">
+      <section className=" w-full justify-center flex flex-col items-center bg-mainBcg">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="flex flex-col">
