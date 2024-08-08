@@ -43,11 +43,13 @@ const WorksPage = async () => {
               key={index}
               className={clsx(
                 "sticky  overflow-hidden top-0 sm:h-[75vh] shrink-0 w-full",
-                index % 2 == 0 ? "bg-white text-black" : "bg-mainBcg text-white"
+                index % 2 == 0
+                  ? "bg-white text-mainBcg"
+                  : "bg-mainBcg text-white"
               )}
             >
               <div className="container">
-                <div className="grid grid-cols-1 sm:grid-cols-2 justify-between py-6 sm:py-12 px-6 border-b-black">
+                <div className="grid grid-cols-1 sm:grid-cols-2 justify-between py-6 sm:py-12 px-6 border-b-mainBcg">
                   <div className="">
                     <h3 className="text-3xl font-oswald">{projectname}</h3>
                     <div className="flex xl:flex-row flex-col gap-3 sm:gap-6 xl:items-center">
@@ -56,7 +58,7 @@ const WorksPage = async () => {
                         className={clsx(
                           "border-2  italic rounded-full px-2 py-2 w-fit",
                           index % 2 == 0
-                            ? "bg-white text-black border-mainBcg"
+                            ? "bg-white text-mainBcg border-mainBcg"
                             : "bg-mainBcg text-white border-white"
                         )}
                       >
@@ -71,10 +73,10 @@ const WorksPage = async () => {
                       href={url}
                       target="_blank"
                       className={clsx(
-                        "bg-black font-oswald w-fit h-fit shrink-0  border-solid px-6 py-2 rounded-full border-2 duration-300 ml-0 sm:ml-12 ",
+                        "bg-mainDcg font-oswald w-fit h-fit shrink-0  border-solid px-6 py-2 rounded-full border-2 duration-300 ml-0 sm:ml-12 ",
                         index % 2 == 0
-                          ? "bg-mainBcg text-white border-white hover:bg-white hover:border-mainBcg hover:text-black"
-                          : "bg-white text-black border-white hover:bg-mainBcg hover:border-white hover:text-white"
+                          ? "bg-mainBcg text-white border-white hover:bg-white hover:border-mainBcg hover:text-mainBcg"
+                          : "bg-white text-mainBcg border-white hover:bg-mainBcg hover:border-white hover:text-white"
                       )}
                     >
                       See More
@@ -120,7 +122,7 @@ const WorksPage = async () => {
               </h2>
               <Link
                 href="https://t.me/Bilskirnirr"
-                className="px-6 font-oswald py-3 w-fit border-2 border-white  cursor-pointer text-white hover:bg-white  hover:text-black hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out text-xl"
+                className="px-6 font-oswald py-3 w-fit border-2 border-white  cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out text-xl"
               >
                 {CallToAction.label}
               </Link>

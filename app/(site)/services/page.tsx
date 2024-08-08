@@ -34,7 +34,7 @@ const ServicesPage = async () => {
                 <Link
                   href={CallToAction.link}
                   target="_blank"
-                  className="text-white border-2 border-white py-3 font-bebas text-xl text-center hover:bg-white hover:text-black duration-300"
+                  className="text-white border-2 border-white py-3 font-bebas text-xl text-center hover:bg-white hover:text-mainBcg duration-300"
                 >
                   {CallToAction.title}
                 </Link>

@@ -11,6 +11,10 @@ const Header = () => {
     setShowMenu(!showMenu);
   };
 
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
+
   return (
     <header className="w-full flex justify-between items-center absolute z-10 bg-mainBcg">
       <div className="container">
@@ -20,12 +24,13 @@ const Header = () => {
           </Link>
 
           <ul
-            className={`flex flex-col transition-all duration-300 ease-in-out sm:flex-row absolute right-0 bg-black w-screen h-screen sm:h-fit sm:w-fit sm:top-0 sm:relative sm:bg-transparent gap-6 justify-center items-center ${showMenu ? "top-0" : "-top-[100vh]"}`}
+            className={`flex flex-col transition-all duration-300 ease-in-out sm:flex-row absolute right-0 bg-mainBcg w-screen h-screen sm:h-fit sm:w-fit sm:top-0 sm:relative sm:bg-transparent gap-6 justify-center items-center ${showMenu ? "top-0" : "-top-[100vh]"}`}
           >
             {headerData.header.map((item) => (
               <li key={item.href} className="text-base uppercase text-white  ">
                 <Link
                   href={item.href}
+                  onClick={closeMenu}
                   className="hover-text-shadow transition-all duration-300 ease-in-out"
                 >
                   {item.label}
@@ -39,7 +44,7 @@ const Header = () => {
             </div>
             <Link
               href="https://t.me/Bilskirnirr"
-              className="sm:block font-oswald hidden border-2 border-white rounded-full px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-black hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
+              className="sm:block font-oswald hidden border-2 border-white rounded-full px-3 py-1 cursor-pointer text-white hover:bg-white  hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
             >
               Contact Us
             </Link>

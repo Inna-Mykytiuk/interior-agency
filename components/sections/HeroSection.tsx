@@ -19,7 +19,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ hero }) => {
         <div className="flex sm:flex-row flex-col-reverse items-start sm:items-end gap-3 xl:gap-0 sm:justify-between w-full relative bottom-0 h-full">
           <Link
             href="/gallery"
-            className="border-2 font-bebas pt-1 pb-[6px] text-white hover:bg-white hover:text-black hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] text-lg  border-white rounded-full px-9 transition-all duration-300 ease-in-out"
+            className="border-2 font-bebas pt-1 pb-[6px] text-white hover:bg-white hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] text-lg  border-white rounded-full px-9 transition-all duration-300 ease-in-out"
           >
             Explore
           </Link>

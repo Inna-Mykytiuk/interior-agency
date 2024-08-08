@@ -18,7 +18,7 @@ const BlogPage: React.FC = async () => {
           <div className="grid justify-between w-full gap-6 grid-cols-1 md:grid-cols-3">
             {postData.map((post, index) => (
               <Link key={index} href={`blog/${post.slug?.current}` || ""}>
-                <div className="w-full flex flex-col justify-between h-full col-span-1 group shrink-0 border border-white px-3 py-2">
+                <div className="w-full flex flex-col justify-between h-full col-span-1 group shrink-0 px-3 py-2 transition-all duration-500 ease-in-out hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)]">
                   <div className="flex flex-col">
                     <h2 className="text-white text-xl">{post.title}</h2>
                   </div>

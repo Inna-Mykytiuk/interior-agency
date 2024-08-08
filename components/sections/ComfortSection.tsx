@@ -19,7 +19,7 @@ const ComfortSection: React.FC<GallerySectionProps> = ({ gallery }) => {
         <div className="w-full mb-6 sm:mb-12">
           <Link
             href="/works"
-            className=" font-semibold border-2 hover:bg-mainBcg hover:text-white font-oswald pt-1 border-black rounded-full px-3 py-1 transition-all duration-300 ease-in-out hover:shadow-md"
+            className=" font-semibold border-2 hover:bg-mainBcg hover:text-white font-oswald pt-1 border-mainBcg rounded-full px-3 py-1 transition-all duration-300 ease-in-out hover:shadow-md"
           >
             See Our Works
           </Link>

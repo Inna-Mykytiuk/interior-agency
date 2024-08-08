@@ -90,7 +90,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
     >
       <div id="container" className="container flex flex-col items-center">
         <div className="flex flex-col w-full">
-          <div className="flex sm:flex-row text-black border-b-black border-b-2 pb-5 justify-between items-start sm:items-center">
+          <div className="flex sm:flex-row text-mainBcg border-b-mainBcg border-b-2 pb-5 justify-between items-start sm:items-center">
             <div>
               <p>{data?.author}</p>
               <p>{data?.publishedAt}</p>
@@ -98,7 +98,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             <div className="flex flex-wrap">
               {data?.categories?.map((category: string, index: number) => (
                 <p
-                  className="border-2 border-black rounded-full px-6 py-2"
+                  className="border-2 border-mainBcg rounded-full px-6 py-2"
                   key={index}
                 >
                   {category}
@@ -107,7 +107,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             </div>
           </div>
           <div className="py-6">
-            <h1 className="text-6xl text-black font-bebas leading-none">
+            <h1 className="text-6xl text-mainBcg font-bebas leading-none">
               {data?.title}
             </h1>
           </div>
@@ -121,7 +121,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             />
           </div>
         </div>
-        <div className="text-black w-full  flex justify-center items-start flex-col">
+        <div className="text-mainBcg w-full sm:w-[70%] flex justify-center items-start flex-col mt-8 sm:mt-16">
           <PortableText value={data?.body} components={componentsTest} />
         </div>
       </div>

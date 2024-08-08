@@ -12,7 +12,9 @@ const ExpertiseSection: React.FC<ExpertisesSectionProps> = ({ expertises }) => {
     <section className="py-6 xl:py-20 mt-0 sm:mt-12 xl:mb-12 h-fit flex items-center justify-center w-full">
       <div className="container">
         <div className="flex flex-col items-center justify-center">
-          <h3 className="text-5xl font-oswald mb-8">Our Expertise</h3>
+          <h3 className="text-5xl text-mainBcg font-oswald mb-8">
+            Our Expertise
+          </h3>
         </div>
         <div className="w-full flex flex-grow flex-col gap-6 sm:flex-row justify-between h-3/4">
           {expertises.map((expertise, index) => (
