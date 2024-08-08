@@ -1,7 +1,6 @@
 export const revalidate = 0;
 
 import React from "react";
-import { SERVICES } from "@/sanity/constants/services";
 import { ContentType, getServicesPage, ImageType } from "@/sanity/queries/page";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +9,7 @@ import Marquee from "react-fast-marquee";
 const ServicesPage = async () => {
   const data = await getServicesPage();
 
-  const { Content, Heading, Gallery, CallToAction, Video, FormContact } = data;
+  const { Content, Heading, Gallery, CallToAction } = data;
 
   return (
     <section className="py-24 overflow-hidden sm:py-30 w-full justify-center flex items-center bg-mainBcg">

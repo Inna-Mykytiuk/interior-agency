@@ -1,5 +1,4 @@
 import Link from "next/link";
-/* eslint-disable react/no-unescaped-entities */
 
 const Footer = () => {
   return (
@@ -7,7 +6,7 @@ const Footer = () => {
       <div id="container" className="container">
         <div className="w-full h-full justify-center items-center flex flex-col mb-6 sm:mb-0">
           <p className="font-oswald leading-none text-white text-[8vw] mb-8">
-            Let's talk{" "}
+            Let&apos;s talk{" "}
           </p>
           <ul className="flex justify-center sm:flex-row items-center sm:gap-6">
             <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-mainBcg transition-all duration-300 ease-in-out mx-3 rounded-full px-3 py-1 hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] ">
