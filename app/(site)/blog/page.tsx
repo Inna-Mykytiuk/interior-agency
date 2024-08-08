@@ -7,14 +7,10 @@ import { getPosts, Post } from "@/sanity/queries/post";
 
 const BlogPage: React.FC = async () => {
   const postData: Post[] = await getPosts();
-  // console.log(postData);
 
   return (
-    <section
-      id="section"
-      className="py-24 sm:py-24  w-full justify-center flex items-center bg-black grow"
-    >
-      <div className="container" id="container">
+    <section className="py-24 sm:pb-24 pt-24 sm:pt-36 w-full justify-center flex items-center bg-mainBcg grow">
+      <div className="container">
         <div>
           <div className="text-white text-6xl font-oswald">
             <h1>Our Blogs</h1>
