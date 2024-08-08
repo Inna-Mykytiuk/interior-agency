@@ -18,7 +18,7 @@ const ExpertiseSection: React.FC<ExpertisesSectionProps> = ({ expertises }) => {
           {expertises.map((expertise, index) => (
             <Link
               key={index}
-              href="/works"
+              href="/blog"
               className="w-full sm:w-1/2 flex justify-center items-center h-[330px] sm:h-[600px] bg-mainBcg group transition-all duration-500 ease-in-out hover:border-mainBcg hover:rounded-xl cursor-pointer relative"
             >
               <span className="text-white text-2xl relative z-10 font-oswald group-hover:opacity-0 opacity-100 transition-all duration-500 ease-in-out">
