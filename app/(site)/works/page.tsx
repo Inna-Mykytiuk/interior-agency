@@ -14,11 +14,8 @@ const WorksPage = async () => {
 
   return (
     <>
-      <section
-        id="section"
-        className="py-24 overflow-hidden sm:py-24  w-full justify-center flex items-center bg-black"
-      >
-        <div id="container" className="container">
+      <section className="py-24 overflow-hidden sm:py-24  w-full justify-center flex items-center bg-mainBcg">
+        <div className="container">
           <h1 className="text-white text-6xl font-oswald">{Hero.heading}</h1>
           <div className="w-full h-full aspect-video flex flex-col">
             <span className="text-md block italic font-bold text-white">
@@ -36,10 +33,7 @@ const WorksPage = async () => {
           </div>
         </div>
       </section>
-      <section
-        id="section"
-        className="py-24 sm:py-24 sm:h-fit relative w-full justify-center flex flex-col items-center bg-black"
-      >
+      <section className="py-24 sm:py-24 sm:h-fit relative w-full justify-center flex flex-col items-center bg-mainBcg">
         {Content.map((project: ProjectType, index: number) => {
           const { location, url, imageUrls, excerpt, tagline, projectname } =
             project;
@@ -48,11 +42,11 @@ const WorksPage = async () => {
             <div
               key={index}
               className={clsx(
-                "sticky  overflow-hidden top-0 sm:h-[65vh] shrink-0 w-full",
-                index % 2 == 0 ? "bg-white text-black" : "bg-black text-white"
+                "sticky  overflow-hidden top-0 sm:h-[75vh] shrink-0 w-full",
+                index % 2 == 0 ? "bg-white text-black" : "bg-mainBcg text-white"
               )}
             >
-              <div id="container" className="container">
+              <div className="container">
                 <div className="grid grid-cols-1 sm:grid-cols-2 justify-between py-6 sm:py-12 px-6 border-b-black">
                   <div className="">
                     <h3 className="text-3xl font-oswald">{projectname}</h3>
@@ -62,8 +56,8 @@ const WorksPage = async () => {
                         className={clsx(
                           "border-2  italic rounded-full px-2 py-2 w-fit",
                           index % 2 == 0
-                            ? "bg-white text-black border-black"
-                            : "bg-black text-white border-white"
+                            ? "bg-white text-black border-mainBcg"
+                            : "bg-mainBcg text-white border-white"
                         )}
                       >
                         {tagline}
@@ -79,8 +73,8 @@ const WorksPage = async () => {
                       className={clsx(
                         "bg-black font-oswald w-fit h-fit shrink-0  border-solid px-6 py-2 rounded-full border-2 duration-300 ml-0 sm:ml-12 ",
                         index % 2 == 0
-                          ? "bg-black text-white border-white hover:bg-white hover:border-black hover:text-black"
-                          : "bg-white text-black border-white hover:bg-black hover:border-white hover:text-white"
+                          ? "bg-mainBcg text-white border-white hover:bg-white hover:border-mainBcg hover:text-black"
+                          : "bg-white text-black border-white hover:bg-mainBcg hover:border-white hover:text-white"
                       )}
                     >
                       See More
@@ -117,11 +111,8 @@ const WorksPage = async () => {
           );
         })}
       </section>
-      <section
-        id="section"
-        className=" w-full justify-center flex flex-col items-center bg-black"
-      >
-        <div id="container" className="container">
+      <section className=" w-full justify-center flex flex-col items-center bg-black">
+        <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="flex flex-col">
               <h2 className="text-4xl md:text-6xl text-white font-oswald leading-none mb-12">
