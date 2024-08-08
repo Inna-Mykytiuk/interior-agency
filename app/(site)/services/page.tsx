@@ -13,11 +13,8 @@ const ServicesPage = async () => {
   const { Content, Heading, Gallery, CallToAction, Video, FormContact } = data;
 
   return (
-    <section
-      id="section"
-      className="py-24 overflow-hidden sm:py-30 w-full justify-center flex items-center bg-black"
-    >
-      <div id="container" className="container">
+    <section className="py-24 overflow-hidden sm:py-30 w-full justify-center flex items-center bg-mainBcg">
+      <div className="container">
         <div className="text-white text-6xl font-bebas">
           <h1>{Heading}</h1>
         </div>

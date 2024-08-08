@@ -19,11 +19,8 @@ const GalleryPage = async () => {
   const { Gallery } = data;
 
   return (
-    <section
-      id="section"
-      className="py-24 overflow-hidden sm:py-24 relative w-full justify-center flex items-center bg-black"
-    >
-      <div id="container" className="container">
+    <section className="py-24 overflow-hidden sm:py-24 relative w-full justify-center flex items-center bg-mainBcg">
+      <div className="container">
         <h1 className="text-white text-6xl font-oswald">Gallery</h1>
         <span className="text-white text-base font-bold italic">
           Our Entire works are showcased here.
@@ -35,9 +32,9 @@ const GalleryPage = async () => {
                 <Link href="/">
                   <Image
                     src={image.url}
-                    alt=""
-                    width={420}
-                    height={240}
+                    alt="photos"
+                    width={2400}
+                    height={2400}
                     className="w-full h-full object-cover"
                   />
                 </Link>
