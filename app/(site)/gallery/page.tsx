@@ -4,16 +4,6 @@ import { getGalleryPage, ImageType } from "@/sanity/queries/page";
 import Image from "next/image";
 import Link from "next/link";
 
-const randomColumns = () => {
-  const columnSize = [
-    "sm:row-span-1",
-    "sm:col-span-3 row-span-1",
-    "col-span-1 sm:row-span-2",
-  ];
-  const randomIndex = Math.floor(Math.random() * columnSize.length);
-
-  return columnSize[randomIndex];
-};
 const GalleryPage = async () => {
   const data = await getGalleryPage();
   const { Gallery } = data;
@@ -25,10 +15,16 @@ const GalleryPage = async () => {
         <span className="text-white text-base font-bold italic">
           Our Entire works are showcased here.
         </span>
-        <div className="grid-cols-1 grid-flow-row-dense gap-6 sm:grid-cols-2 md:grid-cols-4 grid">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 grid-flow-row-dense">
           {Gallery.imageUrls.map((image: ImageType, index: number) => {
+            const colSpan = Math.floor(Math.random() * 2) + 1;
+            const rowSpan = Math.floor(Math.random() * 2) + 1;
+
             return (
-              <div key={index} className={randomColumns()}>
+              <div
+                key={index}
+                className={`col-span-${colSpan} row-span-${rowSpan}`}
+              >
                 <Link href="/">
                   <Image
                     src={image.url}
