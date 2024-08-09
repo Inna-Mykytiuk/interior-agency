@@ -33,14 +33,8 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        backdrop: `linear-gradient(rgba(41, 41, 41, 0.40),rgba(41, 41, 41, 0.40))`,
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         sample: `url(/images/sample.jpg)`,
-        sample1: `url(/images/sample1.jpg)`,
-        // hero1: `url(/images/hero2.webp)`,
         hero: `url(/images/hero/hero2.png)`,
-        hero2: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(/images/hero/hero2.png)`,
         overlay: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))`,
       },
       content: {
@@ -71,15 +65,6 @@ const config: Config = {
       },
       colors: {
         mainBcg: '#242629',
-        lightBlue: '#4A8087',
-        mainBlue: '#1879EA',
-        btnBorder: '#00A189',
-        titleColor: '#42a8bb',
-        textBlue: '#2FA8B9',
-        dark: '#32323D',
-
-        backdrop: 'rgba(1, 10, 5, 0.75)',
-        backdropBlue: 'rgba(52, 98, 153, 0.85)',
       },
     },
   },

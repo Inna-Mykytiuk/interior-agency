@@ -25,6 +25,7 @@
     "react-fast-marquee": "^1.6.5",
     "react-loader-spinner": "^6.1.6",
     "sanity": "^3.52.4",
+    "sharp": "^0.33.4",
     "styled-components": "^6.1.12"
   },
   "devDependencies": {
