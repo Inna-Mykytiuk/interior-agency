@@ -11,7 +11,7 @@ const oswald = Oswald({
   subsets: ["latin"],
 });
 
-const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL as string;
+const NEXT_PUBLIC_URL = "http://localhost:3000/";
 
 const { title, description, manifest, openGraph, icons } = meta;
 
