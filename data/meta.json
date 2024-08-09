@@ -1,0 +1,35 @@
+{
+  "title": "Interior",
+  "description": "Interior Agency",
+  "keywords": "interior, design",
+  "icons": [
+    {
+      "url": "/meta/favicon.ico"
+    },
+    {
+      "url": "/meta/favicon-16x16.png",
+      "rel": "icon",
+      "type": "image/png"
+    },
+    {
+      "url": "/meta/favicon-32x32.png",
+      "rel": "icon",
+      "type": "image/png"
+    }
+  ],
+  "manifest": "/meta/site.webmanifest",
+  "openGraph": {
+    "type": "website",
+    "title": "Interior",
+    "description": "Interior Agency",
+    "siteName": "Interior",
+    "images": [
+      {
+        "url": "/meta/ogp.jpg",
+        "width": 1200,
+        "height": 630,
+        "alt": "Interior"
+      }
+    ]
+  }
+}

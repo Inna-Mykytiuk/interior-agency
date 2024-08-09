@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Oswald } from "next/font/google";
 import "./globals.css";
+import meta from "../../data/meta.json";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,29 +13,21 @@ const oswald = Oswald({
 
 const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL as string;
 
+const { title, description, manifest, openGraph, icons } = meta;
+
 export const metadata: Metadata = {
   metadataBase: new URL(NEXT_PUBLIC_URL),
-  title: "Interior",
-  description: "Interior Agency",
-  icons: [
-    {
-      url: "/meta/favicon.ico",
-    },
-    {
-      url: "/meta/favicon.ico",
-    },
-    {
-      url: "/meta/favicon-16x16.png",
-      rel: "icon",
-      type: "image/png",
-    },
-    {
-      url: "/meta/favicon-32x32.png",
-      rel: "icon",
-      type: "image/png",
-    },
-  ],
-  manifest: "/meta/site.webmanifest",
+  title,
+  description,
+  icons,
+  manifest,
+  alternates: {
+    canonical: NEXT_PUBLIC_URL,
+  },
+  openGraph: {
+    ...openGraph,
+    url: NEXT_PUBLIC_URL,
+  },
 };
 
 export default function RootLayout({
@@ -47,6 +40,7 @@ export default function RootLayout({
       <body className={oswald.className}>
         <div className="flex flex-col min-h-screen">
           <Header />
+
           {children}
           <Footer />
         </div>
