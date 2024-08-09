@@ -8,7 +8,7 @@ const ImageOverlaySection: React.FC<ImageOverlaySectionProps> = ({
   sectionImageOverlay,
 }) => {
   return (
-    <section className="flex pt-8 pb-0 sm:pb-8 h-fit w-full justify-center items-center">
+    <section className="flex pt-8 pb-0 h-fit w-full justify-center items-center">
       <div className="relative overflow-hidden py-6 sm:py-24 ">
         <h2
           className="uppercase text-[100vh] -mt-[100px] text-mainBcg leading-none font-oswald tracking-tighter

@@ -9,7 +9,7 @@ interface ExpertisesSectionProps {
 
 const ExpertiseSection: React.FC<ExpertisesSectionProps> = ({ expertises }) => {
   return (
-    <section className="py-6 xl:py-20 mt-0 sm:mt-12 xl:mb-12 h-fit flex items-center justify-center w-full">
+    <section className="mt-6 sm:mt-12 mb-10 sm:mb-24 h-fit flex items-center justify-center w-full">
       <div className="container">
         <div className="flex flex-col items-center justify-center">
           <h3 className="text-5xl text-mainBcg font-oswald mb-8">

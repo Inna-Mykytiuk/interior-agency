@@ -14,7 +14,7 @@ interface GallerySectionProps {
 
 const ComfortSection: React.FC<GallerySectionProps> = ({ gallery }) => {
   return (
-    <section className="py-6 xl:py-24 h-fit w-full sm:h-screen flex items-center justify-center relative">
+    <section className="py-6  h-fit w-full sm:h-screen flex items-center justify-center relative">
       <div className="container w-full h-full">
         <div className="w-full mb-6 sm:mb-12">
           <Link
@@ -25,7 +25,7 @@ const ComfortSection: React.FC<GallerySectionProps> = ({ gallery }) => {
           </Link>
         </div>
         <div className="w-full h-full flex items-center justify-center ">
-          <Marquee className="w-full h-full gap-8">
+          <Marquee speed={80} pauseOnHover className="w-full h-full gap-8">
             <Image
               src={room1}
               alt="armchair"
