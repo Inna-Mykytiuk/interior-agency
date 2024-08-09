@@ -12,7 +12,7 @@ const ServicesPage = async () => {
   const { Content, Heading, Gallery, CallToAction } = data;
 
   return (
-    <section className="py-24 overflow-hidden sm:py-30 w-full justify-center flex items-center bg-mainBcg">
+    <section className="pb-24 pt-24 sm:pt-36 overflow-hidden  w-full justify-center flex items-center bg-mainBcg">
       <div className="container">
         <div className="text-white text-6xl font-bebas">
           <h1>{Heading}</h1>

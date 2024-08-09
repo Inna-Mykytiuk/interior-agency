@@ -9,7 +9,7 @@ const GalleryPage = async () => {
   const { Gallery } = data;
 
   return (
-    <section className="py-24 overflow-hidden sm:py-24 relative w-full justify-center flex items-center bg-mainBcg">
+    <section className="pb-24 pt-24 sm:pt-36 overflow-hidden relative w-full justify-center flex items-center bg-mainBcg">
       <div className="container">
         <h1 className="text-white text-6xl font-oswald">Gallery</h1>
         <span className="text-white text-base font-bold italic">
