@@ -86,7 +86,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
   return (
     <section
       id="section"
-      className="py-24 sm:py-24 relative w-full justify-center flex items-center bg-white"
+      className="pt-24 xl:pt-32 pb-0 sm:pb-24 relative w-full justify-center flex items-center bg-white"
     >
       <div id="container" className="container flex flex-col items-center">
         <div className="flex flex-col w-full">

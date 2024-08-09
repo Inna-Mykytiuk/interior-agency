@@ -12,7 +12,7 @@ const ServicesPage = async () => {
   const { Content, Heading, Gallery, CallToAction } = data;
 
   return (
-    <section className="pb-24 pt-24 sm:pt-36 overflow-hidden  w-full justify-center flex items-center bg-mainBcg">
+    <section className="pb-0 sm:pb-24 pt-24 sm:pt-32 overflow-hidden  w-full justify-center flex items-center bg-mainBcg">
       <div className="container">
         <div className="text-white text-6xl font-bebas">
           <h1>{Heading}</h1>
@@ -33,7 +33,7 @@ const ServicesPage = async () => {
                 <Link
                   href={CallToAction.link}
                   target="_blank"
-                  className="text-white border-2 border-white py-3 font-bebas text-xl text-center hover:bg-white hover:text-mainBcg duration-300"
+                  className="text-white border-2 border-white py-3 font-bebas text-xl text-center hover:bg-white hover:text-mainBcg hover:shadow-[4px_4px_30px_0px_rgba(207,188,185,0.9)] transition-all duration-300 ease-in-out"
                 >
                   {CallToAction.title}
                 </Link>

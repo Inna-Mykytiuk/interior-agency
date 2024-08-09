@@ -9,7 +9,7 @@ const BlogPage: React.FC = async () => {
   const postData: Post[] = await getPosts();
 
   return (
-    <section className="pb-24 pt-24 sm:pt-36 w-full justify-center flex items-center bg-mainBcg grow">
+    <section className="pb-0 sm:pb-24 pt-24 sm:pt-36 w-full justify-center flex items-center bg-mainBcg grow">
       <div className="container">
         <div>
           <div className="text-white text-6xl font-oswald">

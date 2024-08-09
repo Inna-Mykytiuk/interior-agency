@@ -45,7 +45,7 @@ const ComfortSection: React.FC<GallerySectionProps> = ({ gallery }) => {
               alt="armchair"
               width={420}
               height={420}
-              className="h-3/4 w-full sm:w-1/3 sm:left-0 bottom-0 sm:absolute object-cover"
+              className="h-[450px] w-full sm:w-1/3 sm:left-0 bottom-0 sm:absolute object-cover"
             />
             {/* {gallery.imageUrls.map((image: ImageType, index: number) => (
               <div key={index} className="sm:w-[33vw] h-full">
