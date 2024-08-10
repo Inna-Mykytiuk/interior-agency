@@ -71,5 +71,5 @@ To run the application locally, follow these steps:
 
 "Interior" is a thoughtfully designed, multi-page landing site tailored for showcasing design and architectural services. Built using modern web development technologies, it ensures high performance, responsiveness, and an intuitive user interface. The strategic use of sliders, galleries, and detailed service descriptions creates an engaging user experience, making it easy for potential clients to explore the services offered and get in touch with the provider. The site's adaptability across various devices further enhances its accessibility and usability.
 
-![preview](https://github.com/Inna-Mykytiuk/interior/blob/main/public/presentation1.jpg)
-![preview](https://github.com/Inna-Mykytiuk/interior/blob/main/public/presentation2.jpg)
+![preview](https://github.com/Inna-Mykytiuk/interior-agency/blob/main/public/presentation1.jpg)
+![preview](https://github.com/Inna-Mykytiuk/interior-agency/blob/main/public/presentation2.jpg)
