@@ -28,7 +28,7 @@ const ExpertiseSection: React.FC<ExpertisesSectionProps> = ({ expertises }) => {
               </span>
               <Image
                 src={expertise.url}
-                alt=""
+                alt="interior"
                 width={720}
                 height={820}
                 className="w-full h-[330px] sm:h-[600px] absolute top-0 opacity-20 group-hover:opacity-100 object-cover z-10 transition-all duration-500 ease-in-out"
