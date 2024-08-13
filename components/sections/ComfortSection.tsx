@@ -47,17 +47,6 @@ const ComfortSection: React.FC<GallerySectionProps> = ({ gallery }) => {
               height={420}
               className="h-[450px] w-full sm:w-1/3 sm:left-0 bottom-0 sm:absolute object-cover"
             />
-            {/* {gallery.imageUrls.map((image: ImageType, index: number) => (
-              <div key={index} className="sm:w-[33vw] h-full">
-                <Image
-                  src={image.url}
-                  alt=""
-                  width={420}
-                  height={420}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            ))} */}
           </Marquee>
         </div>
       </div>

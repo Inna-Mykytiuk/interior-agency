@@ -17,7 +17,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ content }) => {
           <div className="flex flex-col gap-3 items-start sm:gap-9 xl:w-3/4">
             <p className="text-base">{content.excerpt}</p>
             <Link href="/works">
-              <button className="border-2 hover:bg-mainBcg hover:text-white duration-300 font-bebas pt-1 border-mainBcg rounded-full px-6 font-bold py-1">
+              <button type="button" className="border-2 hover:bg-mainBcg hover:text-white duration-300 font-bebas pt-1 border-mainBcg rounded-full px-6 font-bold py-1">
                 Detail
               </button>
             </Link>
