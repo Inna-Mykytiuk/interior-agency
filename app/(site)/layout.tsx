@@ -40,7 +40,6 @@ export default function RootLayout({
       <body className={oswald.className}  >
         <div className="flex flex-col min-h-screen">
           <Header />
-
           {children}
           <Footer />
         </div>
